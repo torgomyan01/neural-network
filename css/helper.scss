@@ -1,0 +1,42 @@
+
+// HELPER SECTION
+@function printFlexType($type) {
+  @if $type == 's' {
+    @return start;
+  } @else if $type == 'c' {
+    @return center;
+  } @else if $type == 'e' {
+    @return end;
+  } @else if $type == 'sb' {
+    @return space-between;
+  } @else if $type == 'sa' {
+    @return space-around;
+  } @else if $type == 'st' {
+    @return stretch;
+  }
+}
+
+@mixin col($colCount, $margin: 0rem) {
+  width: calc((100% / 12) * #{$colCount} - #{$margin});
+}
+
+@mixin flex($x, $y) {
+  display: flex;
+  justify-content: printFlexType($x);
+  align-items: printFlexType($y);
+}
+
+@mixin bg() {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+// HELPER SECTION
+
+$mobile: 320px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;

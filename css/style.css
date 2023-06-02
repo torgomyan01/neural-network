@@ -1,0 +1,157 @@
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2929;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+.trans {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.c-black {
+  color: #000;
+}
+
+.c-grey {
+  color: #A8B8C5;
+}
+
+.c-blue {
+  color: #0089EE;
+}
+
+.c-red {
+  color: #FF4343;
+}
+
+.container {
+  max-width: 1120px !important;
+}
+
+.dropdown-toggle.show::after {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.dropdown-toggle::after {
+  content: "\f078";
+  font-family: FontAwesome, serif;
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: unset;
+  border-top: unset;
+  border-right: unset;
+  border-bottom: unset;
+  border-left: unset;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.75rem;
+  line-height: 110%;
+  color: #1E1E1E;
+}
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+.text-gradient-yellow {
+  background: linear-gradient(90deg, #D63547 0%, #F17F4D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+body {
+  min-height: 100vh;
+  background: url("../assets/images/body-bg.svg"), url("../assets/images/body-rounded-blur.svg");
+  background-position: top right, 0 17rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #080E1D;
+}
+
+.menu-site {
+  width: 100%;
+  background: rgba(17, 13, 35, 0.8);
+  height: 72px;
+}
+.menu-site-item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transition: 0.3s;
+}
+.menu-site-item:hover {
+  background: linear-gradient(90deg, #D63547 0%, #F17F4D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.menu-site-solid {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/*# sourceMappingURL=style.css.map */
