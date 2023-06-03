@@ -17,6 +17,10 @@
     content: "\f095"
 }
 
+.fa-envelope-open:before {
+    content: "\f2b6"
+}
+
 
 /*---------------------------------*/
 
