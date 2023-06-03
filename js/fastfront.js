@@ -1,4 +1,11 @@
 console.time();
+const colors = {
+    yellow: '#EB4549',
+    white: '#FFFFFF'
+}
+
+
+const randomText = () => (Math.random() + 1).toString(36).substring(7);
 
 // FOR COMPONENTS
 const costs = {
