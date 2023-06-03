@@ -51,7 +51,7 @@ a{
 
 @media (max-width: 768px) {
   html {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 body{
@@ -87,6 +87,11 @@ body{
 .container {
   max-width: 1120px !important;
   position: relative;
+  padding: 0 2rem;
+
+  @media (max-width: 576px){
+    padding: 0 1.7rem;
+  }
   &.main{
     &:before{
       content: "ai-club";
@@ -96,10 +101,11 @@ body{
       text-align: center;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.04);
-      position: absolute;
+      position: sticky;
+      display: block;
+      margin-left: -89rem;
       transform: rotate(-90deg);
-      left: -33.4375rem;
-      top: 21.25rem;
+      top: 30.25rem;
     }
   }
 }
@@ -168,16 +174,25 @@ body{
     background-color: #080E1D;
     background-size: contain;
   }
+
+  @media (max-width: 768px){
+    background-size: 71.25rem;
+  }
 }
 
 .menu-site{
   width: 100%;
   background: rgba(17, 13, 35, 0.8);
-  height: 72px;
+  height: 4.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  backdrop-filter: blur(5px);
   &-item{
     font-weight: 400;
-    font-size: 18px;
-    line-height: 16px;
+    font-size: 1.125rem;
+    line-height: 1rem;
     text-transform: uppercase;
     color: #FFFFFF;
     transition: 0.3s;
@@ -187,7 +202,7 @@ body{
   }
   &-solid{
     width: 1px;
-    height: 16px;
+    height: 1rem;
     background: rgba(255, 255, 255, 0.16);
   }
 
@@ -198,7 +213,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    @media (max-width: $md) {
+    @media (max-width: 767px) {
       display: flex;
     }
     &.active{
@@ -270,15 +285,6 @@ body{
 
 .form{
 
-
-  .title-contact{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 56px;
-    color: #FFFFFF;
-
-  }
 
 form {
 
@@ -540,4 +546,50 @@ footer{
       margin-bottom: 0;
     }
   }
+}
+
+.services-item{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url("../assets/images/services-item-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  backdrop-filter: blur(12px);
+  padding: 2.5rem 2rem;
+
+  @include flex('sb', 'c');
+  flex-direction: column;
+  &-title{
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 1.125rem;
+  }
+  &-text{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 1.125rem;
+  }
+
+}
+
+.def-btn{
+  width: 12.9375rem;
+  height: 4rem;
+  border: 0;
+  background: url("../assets/images/btn-bg.svg") no-repeat center center;
+  background-size: 100% 100%;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
 }
