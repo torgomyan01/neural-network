@@ -589,4 +589,27 @@ footer .footer-content .footer-title {
   cursor: pointer;
 }
 
+.widgets-title {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.widget-title {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.image-widget.active {
+  opacity: 0.4;
+  transition: all 0.2s linear;
+}
+
+.widget-heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 56px;
+  color: #FFFFFF;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -4,6 +4,7 @@ const { none, show, active, hidden } = {
     active: 'active',
     hidden: 'overflow-hidden'
 }
+const img_widget = document.querySelectorAll('.image-widget')
 
 const { mobileMenu, body } = {
     mobileMenu: $('.mobile-menu'),
@@ -23,4 +24,18 @@ $('.mobile-menu-board').on('click', function (){
         thisElem.addClass(active)
         body.addClass(hidden)
     }
+})
+
+
+function clearActive(){
+    img_widget.forEach(im=>{
+        im.classList.remove('active')
+    })
+}
+
+img_widget.forEach(el =>{
+    el.addEventListener('click', ()=>{
+        clearActive()
+        el.classList.add('active')
+    })
 })
