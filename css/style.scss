@@ -262,3 +262,31 @@ body{
     border-bottom: 1px solid #ffffff2b;
   }
 }
+
+
+// footer
+
+
+footer{
+
+
+  .footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+
+  .footer-title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.32);
+  }
+
+
+  }
+
+
+}

@@ -247,4 +247,18 @@ body.home {
   border-bottom: 1px solid rgba(255, 255, 255, 0.168627451);
 }
 
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+footer .footer-content .footer-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.32);
+}
+
 /*# sourceMappingURL=style.css.map */
