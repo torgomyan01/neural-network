@@ -142,7 +142,7 @@ body {
 }
 body.home {
   background: url("../assets/images/body-bg.svg"), url("../assets/images/body-rounded-blur.svg"), url("../assets/images/home-bg.png");
-  background-position: top right, 0 17rem, 52rem 3rem;
+  background-position: top right, 0 22rem, 52rem 3rem;
   background-repeat: no-repeat;
   background-color: #080E1D;
   background-size: contain;
