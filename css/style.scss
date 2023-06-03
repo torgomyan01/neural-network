@@ -294,11 +294,12 @@ form {
    border: 1px solid rgba(255, 255, 255, 0.04);
   .inputBox {
     display: flex;
-
+    @media (max-width: 480px) {
+      display: block;
+    }
     .labelinput {
       width: 49%;
       margin-right: 20px;
-
       height: 56px;
       padding: 10px;
       display: flex;
@@ -306,6 +307,10 @@ form {
       background: transparent;
       align-items: center;
       border: 1px solid rgba(255, 255, 255, 0.04);
+      @media (max-width: 480px) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
       img{
         margin-right: 8px ;
         width: 18px;
@@ -344,7 +349,9 @@ form {
       font-size: 16px !important;
       line-height: 16px !important;
       color: #fff !important;
-
+      @media (max-width: 480px) {
+          width: 100%;
+      }
       option {
         color: #1E1E1E;
       }
@@ -363,6 +370,9 @@ form {
       color: #fff !important;
       padding-top: 30px !important;
       padding-left: 20px !important;
+      &:focus{
+        box-shadow: none;
+      }
     }
 
     label{
@@ -371,9 +381,11 @@ form {
       font-weight: 400 !important;
       font-size: 16px !important;
       line-height: 16px !important;
-      &::after{
-        color: #3333 !important;
+      &:after{
+        background-color: transparent !important;
+        color: #000 !important;
       }
+
       img{
         margin-right: 8px;
       }
