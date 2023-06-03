@@ -247,6 +247,92 @@ body.home {
   border-bottom: 1px solid rgba(255, 255, 255, 0.168627451);
 }
 
+.form .title-contact {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 56px;
+  color: #FFFFFF;
+}
+.form form {
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+.form form .inputBox {
+  display: flex;
+}
+.form form .inputBox .labelinput {
+  width: 49%;
+  margin-right: 20px;
+  height: 56px;
+  padding: 10px;
+  display: flex;
+  justify-content: start;
+  background: transparent;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+.form form .inputBox .labelinput img {
+  margin-right: 8px;
+  width: 18px;
+  height: 12px;
+}
+.form form .inputBox .labelinput input {
+  width: 100%;
+  background: transparent;
+  border: none !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 16px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+.form form .inputBox .labelinput input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+.form form .inputBox .contact-select {
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  width: 49%;
+  height: 56px;
+  padding: 10px;
+  border-radius: 0 !important;
+  background: transparent !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 16px !important;
+  color: #fff !important;
+}
+.form form .inputBox .contact-select option {
+  color: #1E1E1E;
+}
+.form form .form-floating textarea {
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: transparent !important;
+  border-radius: 0 !important;
+  resize: none !important;
+  min-height: 248px !important;
+  color: #fff !important;
+  padding-top: 30px !important;
+  padding-left: 20px !important;
+}
+.form form .form-floating label {
+  color: #fff !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 16px !important;
+}
+.form form .form-floating label::after {
+  color: rgba(51, 51, 51, 0.2) !important;
+}
+.form form .form-floating label img {
+  margin-right: 8px;
+}
+
 footer .footer-content {
   display: flex;
   justify-content: space-between;
