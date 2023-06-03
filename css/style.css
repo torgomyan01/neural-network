@@ -78,6 +78,12 @@ body {
   color: #FF4343;
 }
 
+.bg-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
 .container {
   max-width: 1120px !important;
   position: relative;
