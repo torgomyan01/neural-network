@@ -264,6 +264,11 @@ body.home {
 .form form .inputBox {
   display: flex;
 }
+@media (max-width: 480px) {
+  .form form .inputBox {
+    display: block;
+  }
+}
 .form form .inputBox .labelinput {
   width: 49%;
   margin-right: 20px;
@@ -274,6 +279,12 @@ body.home {
   background: transparent;
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.04);
+}
+@media (max-width: 480px) {
+  .form form .inputBox .labelinput {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 .form form .inputBox .labelinput img {
   margin-right: 8px;
@@ -310,6 +321,11 @@ body.home {
   line-height: 16px !important;
   color: #fff !important;
 }
+@media (max-width: 480px) {
+  .form form .inputBox .contact-select {
+    width: 100%;
+  }
+}
 .form form .inputBox .contact-select option {
   color: #1E1E1E;
 }
@@ -323,6 +339,9 @@ body.home {
   padding-top: 30px !important;
   padding-left: 20px !important;
 }
+.form form .form-floating textarea:focus {
+  box-shadow: none;
+}
 .form form .form-floating label {
   color: #fff !important;
   font-style: normal !important;
@@ -330,8 +349,9 @@ body.home {
   font-size: 16px !important;
   line-height: 16px !important;
 }
-.form form .form-floating label::after {
-  color: rgba(51, 51, 51, 0.2) !important;
+.form form .form-floating label:after {
+  background-color: transparent !important;
+  color: #000 !important;
 }
 .form form .form-floating label img {
   margin-right: 8px;
