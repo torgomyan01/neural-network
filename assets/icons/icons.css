@@ -8,100 +8,13 @@
 }
 
 
-.fa-chevron-down:before {
-    content: "\f078"
+.fa-location-dot:before {
+    content: "\f3c5"
 }
 
-.fa-whatsapp:before {
-    content: "\f232"
-}
-
-.fa-telegram:before {
-    content: "\f2c6"
-}
-
-.fa-flip-horizontal:before {
-    content: "\e0ae"
-}
-
-.fa-chevron-right:before {
-    content: "\f054"
-}
-
-.fa-circle-plus:before {
-    content: "\f055"
-}
-
-.fa-star:before {
-    content: "\f005"
-}
 
 .fa-phone:before {
     content: "\f095"
-}
-
-.fa-envelope:before {
-    content: "\f0e0"
-}
-
-.fa-address-card:before {
-    content: "\f2bb"
-}
-
-.fa-pen:before {
-    content: "\f304"
-}
-
-.fa-circle-minus:before {
-    content: "\f056"
-}
-
-.fa-trash-can:before {
-    content: "\f2ed"
-}
-
-.fa-check:before {
-    content: "\f00c"
-}
-
-.fa-circle-check:before {
-    content: "\f058"
-}
-
-.fa-circle-xmark:before {
-    content: "\f057"
-}
-
-.fa-image:before {
-    content: "\f03e"
-}
-
-.fa-xmark:before {
-    content: "\f00d"
-}
-
-.fa-circle-exclamation:before {
-    content: "\f06a"
-}
-.fa-angle-right:before {
-    content: "\f105"
-}
-
-.fa-angle-left:before {
-    content: "\f104"
-}
-
-.fa-minus:before {
-    content: "\f068"
-}
-
-.fa-plus:before {
-    content: "\2b"
-}
-
-
-.fa-arrow-down-to-bracket:before {
-    content: "\e094"
 }
 
 
