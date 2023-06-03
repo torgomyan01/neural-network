@@ -8,6 +8,8 @@ const { mobileMenu } = {
     mobileMenu: $('.mobile-menu')
 }
 
+AOS.init()
+
 $('.mobile-menu-board').on('click', function (){
     const thisElem = $(this);
     if(thisElem.hasClass(active)){
