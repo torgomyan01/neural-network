@@ -83,6 +83,9 @@ body{
 .c-red {
   color: #FF4343;
 }
+.bg-image{
+  @include bg;
+}
 
 .container {
   max-width: 1120px !important;
