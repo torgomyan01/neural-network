@@ -278,7 +278,7 @@ body{
   width: 100%;
   background: rgba(17, 13, 35, 0.8);
   z-index: 1;
-  margin-top: 72px;
+  margin-top: 4.5rem;
   @include flex('s', 'c');
   flex-direction: column;
   backdrop-filter: blur(5px);
@@ -309,9 +309,9 @@ form {
     }
     .labelinput {
       width: 49%;
-      margin-right: 20px;
-      height: 56px;
-      padding: 10px;
+      margin-right: 1.25rem;
+      height: 3.5rem;
+      padding: 0.625rem;
       display: flex;
       justify-content: start;
       background: transparent;
@@ -323,8 +323,8 @@ form {
       }
       img{
         margin-right: 8px ;
-        width: 18px;
-        height: 12px;
+        width: 1.125rem;
+        height: 0.75rem;
       }
       input {
         width: 100%;
@@ -332,14 +332,14 @@ form {
         border: none !important;
         font-style: normal;
         font-weight: 400 !important;
-        font-size: 16px;
-        line-height: 16px;
+        font-size: 1rem;
+        line-height: 1rem;
         color: #FFFFFF;
         &::placeholder {
           font-style: normal;
           font-weight: 400;
-          font-size: 16px;
-          line-height: 16px;
+          font-size: 1rem;
+          line-height: 1rem;
           color: #FFFFFF;
 
         }
@@ -350,14 +350,14 @@ form {
     .contact-select {
       border: 1px solid rgba(255, 255, 255, 0.04);
       width: 49%;
-      height: 56px;
-      padding: 10px ;
+      height: 3.5rem;
+      padding: 0.625rem ;
       border-radius: 0 !important;
       background: transparent !important;
       font-style: normal !important;
       font-weight: 400 !important;
-      font-size: 16px !important;
-      line-height: 16px !important;
+      font-size: 1rem !important;
+      line-height: 1rem !important;
       color: #fff !important;
       @media (max-width: 480px) {
           width: 100%;
@@ -376,10 +376,10 @@ form {
       background: transparent !important;
       border-radius: 0 !important;
       resize: none !important;
-      min-height: 248px !important;
+      min-height: 15.5rem !important;
       color: #fff !important;
-      padding-top: 30px !important;
-      padding-left: 20px !important;
+      padding-top: 1.875rem !important;
+      padding-left: 1.25rem !important;
       &:focus{
         box-shadow: none;
       }
@@ -389,15 +389,15 @@ form {
       color: #fff !important;
       font-style: normal !important;
       font-weight: 400 !important;
-      font-size: 16px !important;
-      line-height: 16px !important;
+      font-size: 1rem !important;
+      line-height: 1rem !important;
       &:after{
         background-color: transparent !important;
         color: #000 !important;
       }
 
       img{
-        margin-right: 8px;
+        margin-right: 0.5rem;
       }
     }
 
@@ -633,10 +633,106 @@ footer{
 .widget-heading{
   font-style: normal;
   font-weight: 600;
-  font-size: 40px;
-  line-height: 56px;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
   color: #FFFFFF;
 
 }
 
 
+.box-col{
+  @media (max-width: 768px) {
+    display: flex;
+    overflow-y: auto;
+   gap: 1.5rem;
+  }
+}
+
+.box-col2{
+  position: relative;
+  left: -55px;
+  @media (max-width: 768px) {
+    left: 1px;
+    margin-top: 3.125rem;
+  }
+  .box-content {
+    padding: 0 5rem;
+    min-height: 30rem;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 480px) {
+     padding: 0 2.5rem;
+    }
+    .box-content-heading{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      color: #FFFFFF;
+    }
+
+    .buttons{
+      display: flex;
+      justify-content: center;
+      @media (max-width: 480px) {
+        display: block;
+        position: relative;
+        left: 20%;
+      }
+      @media (max-width: 360px) {
+        display: block;
+        position: relative;
+        left: 1%;
+      }
+      .start{
+        margin-left: 2.0625rem;
+        @media (max-width: 480px) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .box-content-footer{
+      margin-top: 4rem;
+    .content-top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h4{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        color: #FFFFFF;
+      }
+
+      i{
+        color: #FE46E1;
+        font-size: 1.875rem;
+        cursor: pointer;
+      }
+    }
+
+
+    .images{
+      display: flex;
+      margin-top: 2.5rem;
+      overflow-y: auto;
+
+      .image{
+        margin-right: 0.75rem;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+
+  }
+
+}
+
+// en widget

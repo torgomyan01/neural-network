@@ -5,6 +5,7 @@ const { none, show, active, hidden } = {
     hidden: 'overflow-hidden'
 }
 const img_widget = document.querySelectorAll('.image-widget')
+const box_item = document.querySelectorAll('.box-item')
 
 const { mobileMenu, body } = {
     mobileMenu: $('.mobile-menu'),
