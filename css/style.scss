@@ -13,7 +13,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: rgba(17, 13, 35, 1);
   border-radius: 10px;
 }
 
@@ -761,7 +761,14 @@ footer {
 
 
 .box-col {
-  @media (max-width: 768px) {
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+  @media (max-width: 991px) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -864,6 +871,13 @@ footer {
       margin-top: 2.5rem;
       overflow-y: auto;
 
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+      }
       .image {
         margin-right: .6rem;
 

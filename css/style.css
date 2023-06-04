@@ -11,7 +11,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: rgb(17, 13, 35);
   border-radius: 10px;
 }
 
@@ -707,7 +707,14 @@ footer .footer-content .footer-title {
   color: #FFFFFF;
 }
 
-@media (max-width: 768px) {
+.box-col::-webkit-scrollbar-track {
+  background: transparent;
+}
+.box-col::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+@media (max-width: 991px) {
   .box-col {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -809,6 +816,13 @@ footer .footer-content .footer-title {
   display: flex;
   margin-top: 2.5rem;
   overflow-y: auto;
+}
+.box-col2 .box-content-footer .images::-webkit-scrollbar-track {
+  background: transparent;
+}
+.box-col2 .box-content-footer .images::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
 }
 .box-col2 .box-content-footer .images .image {
   margin-right: 0.6rem;
