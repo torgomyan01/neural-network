@@ -107,6 +107,20 @@ body {
   margin-left: -89rem;
   transform: rotate(-90deg);
   top: 30.25rem;
+  transition: 0.3s;
+}
+@media (max-width: 1550px) {
+  .container.main:before {
+    font-size: 6rem;
+    margin-left: -84rem;
+    top: 22.25rem;
+  }
+}
+@media (max-width: 1430px) {
+  .container.main:before {
+    margin-left: -75rem;
+    top: 26.25rem;
+  }
 }
 
 .dropdown-toggle.show::after {
