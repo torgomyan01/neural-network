@@ -105,8 +105,10 @@ body {
   position: sticky;
   display: block;
   margin-left: -89rem;
+  -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
   top: 30.25rem;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 @media (max-width: 1550px) {
@@ -157,6 +159,7 @@ body {
 }
 
 .text-gradient-yellow {
+  background: -webkit-gradient(linear, left top, right top, from(#D63547), to(#F17F4D));
   background: linear-gradient(90deg, #D63547 0%, #F17F4D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -192,6 +195,7 @@ body.home {
   top: 0;
   left: 0;
   z-index: 100;
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
 .menu-site-item {
@@ -200,9 +204,11 @@ body.home {
   line-height: 1rem;
   text-transform: uppercase;
   color: #FFFFFF;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .menu-site-item:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#D63547), to(#F17F4D));
   background: linear-gradient(90deg, #D63547 0%, #F17F4D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -218,16 +224,26 @@ body.home {
   width: 30px;
   height: 40px;
   display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 @media (max-width: 767px) {
   .menu-site .mobile-menu-board {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
 .menu-site .mobile-menu-board.active span:nth-of-type(1) {
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   top: 10px;
 }
@@ -235,10 +251,12 @@ body.home {
   opacity: 0;
 }
 .menu-site .mobile-menu-board.active span:nth-of-type(3) {
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   top: -10px;
 }
 .menu-site .mobile-menu-board span {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   width: 100%;
   height: 2px;
@@ -251,6 +269,7 @@ body.home {
   margin: 0;
 }
 .menu-site .mobile-menu-board span:nth-of-type(1) {
+  -webkit-transform: rotate(0);
   transform: rotate(0);
   top: 0;
 }
@@ -258,6 +277,7 @@ body.home {
   opacity: 1;
 }
 .menu-site .mobile-menu-board span:nth-of-type(3) {
+  -webkit-transform: rotate(0);
   transform: rotate(0);
   top: 0;
 }
@@ -274,13 +294,20 @@ body.home {
   display: flex;
   justify-content: start;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
+  -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 0;
 }
 .mobile-menu.active {
+  -webkit-transform: translateX(0);
   transform: translateX(0);
   opacity: 1;
 }
@@ -290,8 +317,12 @@ body.home {
 
 .form form {
   border: 1px solid rgba(255, 255, 255, 0.04);
+  background: url("../assets/images/contact-bg.png") no-repeat center;
+  background-size: 100% 100%;
 }
 .form form .inputBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 @media (max-width: 480px) {
@@ -304,9 +335,15 @@ body.home {
   margin-right: 1.25rem;
   height: 3.5rem;
   padding: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: start;
   background: transparent;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.04);
 }
@@ -327,6 +364,34 @@ body.home {
   border: none !important;
   font-style: normal;
   font-weight: 400 !important;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #FFFFFF;
+}
+.form form .inputBox .labelinput input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #FFFFFF;
+}
+.form form .inputBox .labelinput input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #FFFFFF;
+}
+.form form .inputBox .labelinput input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #FFFFFF;
+}
+.form form .inputBox .labelinput input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1rem;
   color: #FFFFFF;
@@ -370,6 +435,7 @@ body.home {
   padding-left: 1.25rem !important;
 }
 .form form .form-floating textarea:focus {
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .form form .form-floating label {
@@ -395,6 +461,9 @@ footer .footer-content {
 }
 @media (max-width: 576px) {
   footer .footer-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
@@ -426,6 +495,7 @@ footer .footer-content .footer-title {
   left: -100px;
   top: 50%;
   background: #fff;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -435,6 +505,7 @@ footer .footer-content .footer-title {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .nnc-item {
@@ -527,6 +598,7 @@ footer .footer-content .footer-title {
   position: relative;
   margin-bottom: 2.25rem;
   font-weight: bold;
+  background: -webkit-gradient(linear, left top, right top, from(#D63547), to(#F17F4D));
   background: linear-gradient(90deg, #D63547 0%, #F17F4D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -565,11 +637,15 @@ footer .footer-content .footer-title {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   padding: 2.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 .services-item-title {
@@ -602,6 +678,10 @@ footer .footer-content .footer-title {
   color: #FFFFFF;
   cursor: pointer;
 }
+.def-btn.pink {
+  background: url("../assets/images/pink-btn-bg.png") no-repeat center center;
+  background-size: 100% 100%;
+}
 
 .widgets-title {
   font-weight: 400;
@@ -615,6 +695,7 @@ footer .footer-content .footer-title {
 
 .image-widget.active {
   opacity: 0.4;
+  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
@@ -628,6 +709,8 @@ footer .footer-content .footer-title {
 
 @media (max-width: 768px) {
   .box-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     overflow-y: auto;
     gap: 1.5rem;
@@ -649,8 +732,14 @@ footer .footer-content .footer-title {
   min-height: 30rem;
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.16);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 @media (max-width: 480px) {
@@ -666,7 +755,11 @@ footer .footer-content .footer-title {
   color: #FFFFFF;
 }
 .box-col2 .box-content .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 @media (max-width: 480px) {
@@ -695,8 +788,14 @@ footer .footer-content .footer-title {
   margin-top: 4rem;
 }
 .box-col2 .box-content-footer .content-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .box-col2 .box-content-footer .content-top h4 {
@@ -712,6 +811,8 @@ footer .footer-content .footer-title {
   cursor: pointer;
 }
 .box-col2 .box-content-footer .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 2.5rem;
   overflow-y: auto;

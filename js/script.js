@@ -1,15 +1,17 @@
-const { none, show, active, hidden } = {
+const { none, show, active, hidden, opacity25 } = {
     none: "d-none",
     show: 'show',
     active: 'active',
-    hidden: 'overflow-hidden'
+    hidden: 'overflow-hidden',
+    opacity25: 'opacity-25'
 }
 const img_widget = document.querySelectorAll('.image-widget')
 const box_item = document.querySelectorAll('.box-item')
 
-const { mobileMenu, body } = {
+const { mobileMenu, body, imageWidget } = {
     mobileMenu: $('.mobile-menu'),
-    body: $('body')
+    body: $('body'),
+    imageWidget: $('.image-widget'),
 }
 
 AOS.init()
@@ -40,3 +42,9 @@ img_widget.forEach(el =>{
         el.classList.add('active')
     })
 })
+
+imageWidget.on('click', function (){
+    imageWidget.addClass(opacity25);
+    $(this).removeClass(opacity25)
+})
+
