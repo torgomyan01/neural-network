@@ -256,7 +256,7 @@ body.home {
   width: 100%;
   background: rgba(17, 13, 35, 0.8);
   z-index: 1;
-  margin-top: 72px;
+  margin-top: 4.5rem;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -287,9 +287,9 @@ body.home {
 }
 .form form .inputBox .labelinput {
   width: 49%;
-  margin-right: 20px;
-  height: 56px;
-  padding: 10px;
+  margin-right: 1.25rem;
+  height: 3.5rem;
+  padding: 0.625rem;
   display: flex;
   justify-content: start;
   background: transparent;
@@ -304,8 +304,8 @@ body.home {
 }
 .form form .inputBox .labelinput img {
   margin-right: 8px;
-  width: 18px;
-  height: 12px;
+  width: 1.125rem;
+  height: 0.75rem;
 }
 .form form .inputBox .labelinput input {
   width: 100%;
@@ -313,28 +313,28 @@ body.home {
   border: none !important;
   font-style: normal;
   font-weight: 400 !important;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 1rem;
+  line-height: 1rem;
   color: #FFFFFF;
 }
 .form form .inputBox .labelinput input::placeholder {
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 1rem;
+  line-height: 1rem;
   color: #FFFFFF;
 }
 .form form .inputBox .contact-select {
   border: 1px solid rgba(255, 255, 255, 0.04);
   width: 49%;
-  height: 56px;
-  padding: 10px;
+  height: 3.5rem;
+  padding: 0.625rem;
   border-radius: 0 !important;
   background: transparent !important;
   font-style: normal !important;
   font-weight: 400 !important;
-  font-size: 16px !important;
-  line-height: 16px !important;
+  font-size: 1rem !important;
+  line-height: 1rem !important;
   color: #fff !important;
 }
 @media (max-width: 480px) {
@@ -350,10 +350,10 @@ body.home {
   background: transparent !important;
   border-radius: 0 !important;
   resize: none !important;
-  min-height: 248px !important;
+  min-height: 15.5rem !important;
   color: #fff !important;
-  padding-top: 30px !important;
-  padding-left: 20px !important;
+  padding-top: 1.875rem !important;
+  padding-left: 1.25rem !important;
 }
 .form form .form-floating textarea:focus {
   box-shadow: none;
@@ -362,15 +362,15 @@ body.home {
   color: #fff !important;
   font-style: normal !important;
   font-weight: 400 !important;
-  font-size: 16px !important;
-  line-height: 16px !important;
+  font-size: 1rem !important;
+  line-height: 1rem !important;
 }
 .form form .form-floating label:after {
   background-color: transparent !important;
   color: #000 !important;
 }
 .form form .form-floating label img {
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 footer .footer-content {
@@ -607,9 +607,106 @@ footer .footer-content .footer-title {
 .widget-heading {
   font-style: normal;
   font-weight: 600;
-  font-size: 40px;
-  line-height: 56px;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
   color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .box-col {
+    display: flex;
+    overflow-y: auto;
+    gap: 1.5rem;
+  }
+}
+
+.box-col2 {
+  position: relative;
+  left: -55px;
+}
+@media (max-width: 768px) {
+  .box-col2 {
+    left: 1px;
+    margin-top: 3.125rem;
+  }
+}
+.box-col2 .box-content {
+  padding: 0 5rem;
+  min-height: 30rem;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  .box-col2 .box-content {
+    padding: 0 2.5rem;
+  }
+}
+.box-col2 .box-content .box-content-heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #FFFFFF;
+}
+.box-col2 .box-content .buttons {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 480px) {
+  .box-col2 .box-content .buttons {
+    display: block;
+    position: relative;
+    left: 20%;
+  }
+}
+@media (max-width: 360px) {
+  .box-col2 .box-content .buttons {
+    display: block;
+    position: relative;
+    left: 1%;
+  }
+}
+.box-col2 .box-content .buttons .start {
+  margin-left: 2.0625rem;
+}
+@media (max-width: 480px) {
+  .box-col2 .box-content .buttons .start {
+    margin-left: 0;
+  }
+}
+.box-col2 .box-content-footer {
+  margin-top: 4rem;
+}
+.box-col2 .box-content-footer .content-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box-col2 .box-content-footer .content-top h4 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #FFFFFF;
+}
+.box-col2 .box-content-footer .content-top i {
+  color: #FE46E1;
+  font-size: 1.875rem;
+  cursor: pointer;
+}
+.box-col2 .box-content-footer .images {
+  display: flex;
+  margin-top: 2.5rem;
+  overflow-y: auto;
+}
+.box-col2 .box-content-footer .images .image {
+  margin-right: 0.75rem;
+}
+.box-col2 .box-content-footer .images .image:last-child {
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
