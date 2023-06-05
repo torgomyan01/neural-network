@@ -28,6 +28,10 @@
 .fa-user:before{
     content: "\f007"
 }
+
+.fa-rectangle-list:before{
+    content: "\f022\f022"
+}
 /*---------------------------------*/
 
 

@@ -873,4 +873,8 @@ footer .footer-content .footer-title {
   padding-left: 8px;
 }
 
+.modal {
+  backdrop-filter: blur(5px);
+}
+
 /*# sourceMappingURL=style.css.map */
