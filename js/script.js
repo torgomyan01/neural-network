@@ -48,3 +48,17 @@ imageWidget.on('click', function (){
     $(this).removeClass(opacity25)
 })
 
+const defaultInput = $('.def-input input');
+const inpLabel = $('.def-input');
+
+defaultInput.on('blur', function (){
+    inpLabel.map((index, e) => {
+        if($(e).children('input').val() === ''){
+            $(e).removeClass(active);
+        }
+    })
+})
+
+defaultInput.on('focus', function (){
+    $(this).parent().addClass(active);
+})

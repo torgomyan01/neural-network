@@ -890,3 +890,47 @@ footer {
   }
 
 }
+
+
+.def-input{
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  &.active{
+    span{
+      transform: translateY(-7px) translateX(-8px);
+      opacity: 1;
+      font-size: 0.9rem;
+    }
+    input{
+      border: 1px solid rgba(255, 255, 255, 1);
+    }
+  }
+  span{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+    transform: translateY(2.1875rem);
+    transition: 0.3s;
+    cursor: text;
+    opacity: 0.9;
+    padding-left: 10px;
+  }
+  input{
+    width: 100%;
+    height: 3.125rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+    color: #fff;
+    resize: none;
+    transition: 0.3s;
+    background: transparent;
+    padding-left: 8px;
+  }
+}
