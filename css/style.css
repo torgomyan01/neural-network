@@ -437,6 +437,7 @@ body.home {
 .form form .form-floating textarea:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 .form form .form-floating label {
   color: #fff !important;
@@ -844,7 +845,7 @@ footer .footer-content .footer-title {
   font-size: 0.9rem;
 }
 .def-input.active input {
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 .def-input span {
   font-weight: 400;
@@ -860,7 +861,7 @@ footer .footer-content .footer-title {
 .def-input input {
   width: 100%;
   height: 3.125rem;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.04);
   font-style: normal;
   font-weight: 400;
   font-size: 1.125rem;

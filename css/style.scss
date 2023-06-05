@@ -477,6 +477,7 @@ body {
         &:focus {
           -webkit-box-shadow: none;
           box-shadow: none;
+          border: 1px solid rgba(255, 255, 255, 0.5);
         }
       }
 
@@ -905,7 +906,7 @@ footer {
       font-size: 0.9rem;
     }
     input{
-      border: 1px solid rgba(255, 255, 255, 1);
+      border: 1px solid rgba(255, 255, 255, 0.5);
     }
   }
   span{
@@ -922,7 +923,7 @@ footer {
   input{
     width: 100%;
     height: 3.125rem;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
