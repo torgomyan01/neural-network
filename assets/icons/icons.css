@@ -32,6 +32,10 @@
 .fa-rectangle-list:before{
     content: "\f022\f022"
 }
+
+.fa-check:before{
+    content: "\f00c"
+}
 /*---------------------------------*/
 
 

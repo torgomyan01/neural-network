@@ -679,6 +679,10 @@ footer .footer-content .footer-title {
   color: #FFFFFF;
   cursor: pointer;
 }
+.def-btn.disabled {
+  opacity: 0.5;
+  cursor: unset;
+}
 .def-btn.pink {
   background: url("../assets/images/pink-btn-bg.png") no-repeat center center;
   background-size: 100% 100%;
@@ -827,6 +831,35 @@ footer .footer-content .footer-title {
 }
 .box-col2 .box-content-footer .images .image {
   margin-right: 0.6rem;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.625rem;
+  height: 5.625rem;
+}
+.box-col2 .box-content-footer .images .image img {
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.box-col2 .box-content-footer .images .image.active img {
+  opacity: 0.3;
+}
+.box-col2 .box-content-footer .images .image.active .fa-check {
+  opacity: 1;
+}
+.box-col2 .box-content-footer .images .image .fa-check {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #FE46E1;
+  font-size: 30px;
+  transition: 0.3s;
+  opacity: 0;
 }
 .box-col2 .box-content-footer .images .image:last-child {
   margin-right: -0.1rem;

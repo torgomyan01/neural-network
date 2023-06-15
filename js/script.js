@@ -1,9 +1,10 @@
-const { none, show, active, hidden, opacity25 } = {
+const { none, show, active, hidden, opacity25, disabled } = {
     none: "d-none",
     show: 'show',
     active: 'active',
     hidden: 'overflow-hidden',
-    opacity25: 'opacity-25'
+    opacity25: 'opacity-25',
+    disabled: 'disabled'
 }
 const img_widget = document.querySelectorAll('.image-widget')
 const box_item = document.querySelectorAll('.box-item')
@@ -64,17 +65,27 @@ defaultInput.on('focus', function (){
 })
 
 
-const moreModal = new bootstrap.Modal('#more-modal', {
-    keyboard: false
+
+const presets = $('.box-col2 .box-content-footer .images .image');
+
+
+presets.on('click', function (){
+    presets.removeClass(active);
+    $(this).addClass(active);
+    $('.def-btn.pink').removeClass(disabled).removeAttr('disabled');
+
+    $('.box-col2 .box-content').css('padding', '0 5rem');
+    $('#upload-block').removeClass(none);
+    $('#video').addClass(none);
+    $('#video source').attr('src', `assets/videos/${this.dataset.videourl}`)
+
 })
 
-$('.services-item button').on('click', function (){
-    moreModal.show();
-    const title = $(this).parent().prev().children('.services-item-title').text()
-    const text = $(this).data('text');
-
-    $('#more-modal .modal-title').text(title);
-    $('#more-modal .modal-body').text(text);
-
-
+$('.def-btn.pink').on('click', function (){
+    $('.box-col2 .box-content').css('padding', '0');
+    $('#upload-block').addClass(none);
+    $('#video').removeClass(none);
+    document.getElementById('video').load();
+    document.getElementById('video').play();
+    $('#video source').attr('src', this.dataset.videourl)
 })
