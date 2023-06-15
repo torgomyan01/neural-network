@@ -77,7 +77,8 @@ presets.on('click', function (){
     $('.box-col2 .box-content').css('padding', '0 5rem');
     $('#upload-block').removeClass(none);
     $('#video').addClass(none);
-    $('#video source').attr('src', `assets/videos/${this.dataset.videourl}`)
+    $('#video source').attr('src', `assets/videos/${this.dataset.videourl}`);
+    $('.box-content-heading').text('File Uploaded')
 
 })
 
@@ -87,5 +88,6 @@ $('.def-btn.pink').on('click', function (){
     $('#video').removeClass(none);
     document.getElementById('video').load();
     document.getElementById('video').play();
-    $('#video source').attr('src', this.dataset.videourl)
+    $('#video source').attr('src', this.dataset.videourl);
+    $('.box-content-heading').text('Upload a video that has people walking. Format: mpg, mpeg, mp4')
 })
