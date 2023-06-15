@@ -73,7 +73,7 @@ presets.on('click', function (){
     presets.removeClass(active);
     $(this).addClass(active);
     $('.def-btn.pink').removeClass(disabled).removeAttr('disabled');
-
+    $('.close-video').removeClass('active');
     $('.box-col2 .box-content').css('padding', '0 5rem');
     $('#upload-block').removeClass(none);
     $('#video').addClass(none);
@@ -85,6 +85,7 @@ presets.on('click', function (){
 $('.def-btn.pink').on('click', function (){
     $('.box-col2 .box-content').css('padding', '0');
     $('#upload-block').addClass(none);
+    $('.close-video').addClass('active');
     $('#video').removeClass(none);
     document.getElementById('video').load();
     document.getElementById('video').play();

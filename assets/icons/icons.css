@@ -12,6 +12,10 @@
     content: "\f3c5"
 }
 
+.fa-square-xmark:before{
+    content: "\f2d3"
+}
+
 
 .fa-phone:before {
     content: "\f095"

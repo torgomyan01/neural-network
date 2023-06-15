@@ -748,6 +748,8 @@ footer {
   font-style: normal;
 }
 
+
+
 .image-widget {
   &.active {
     opacity: .7;
@@ -791,6 +793,8 @@ footer {
     margin-top: 3.125rem;
   }
 
+
+
   .box-content {
     padding: 0 5rem;
     min-height: 30rem;
@@ -799,14 +803,36 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    &:hover{
+      .close-video{
+        &.active{
+          display: initial;
+        }
+      }
+    }
     @media (max-width: 480px) {
       padding: 0 2.5rem;
+    }
+
+    .close-video{
+      position: absolute;
+      color: #fff;
+      font-size: 1.5rem;
+      right: 15px;
+      top: 15px;
+      cursor: pointer;
+      display: none;
+      z-index: 1;
+      &:hover{
+        color: #dc3545;
+      }
     }
 
     .box-content-heading {

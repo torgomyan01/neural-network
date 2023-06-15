@@ -747,6 +747,7 @@ footer .footer-content .footer-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -754,10 +755,26 @@ footer .footer-content .footer-title {
   -ms-flex-align: center;
   align-items: center;
 }
+.box-col2 .box-content:hover .close-video.active {
+  display: initial;
+}
 @media (max-width: 480px) {
   .box-col2 .box-content {
     padding: 0 2.5rem;
   }
+}
+.box-col2 .box-content .close-video {
+  position: absolute;
+  color: #fff;
+  font-size: 1.5rem;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  display: none;
+  z-index: 1;
+}
+.box-col2 .box-content .close-video:hover {
+  color: #dc3545;
 }
 .box-col2 .box-content .box-content-heading {
   font-style: normal;
