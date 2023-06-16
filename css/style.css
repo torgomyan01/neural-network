@@ -787,9 +787,19 @@ footer .footer-content .footer-title {
   cursor: pointer;
   transition: 0.3s;
   opacity: 0;
+  z-index: 10;
 }
 .box-col2 .box-content-close:hover {
   transform: scale(1.1);
+}
+.box-col2 .box-content ul {
+  list-style: none;
+}
+.box-col2 .box-content ul li {
+  font-size: 1.125rem;
+  color: #fff;
+  text-shadow: 0 0 49px #000000;
+  text-transform: capitalize;
 }
 .box-col2 .box-content.active .box-content-close {
   opacity: 1;
