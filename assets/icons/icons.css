@@ -40,6 +40,9 @@
 .fa-check:before{
     content: "\f00c"
 }
+.fa-xmark:before{
+    content: "\f00d"
+}
 /*---------------------------------*/
 
 

@@ -165,6 +165,20 @@
       <div class="box-col2">
         <h2 class="widget-heading mb-32">Fixing the movement of people</h2>
         <div class="box-content">
+          <div class="box-content-close">
+            <i class="fa-regular fa-xmark"></i>
+          </div>
+          <div class="box-content-loading d-none">
+            <div class="loading-box">
+              <div class="inter-load">
+                <div class="rect rect1"></div>
+                <div class="rect rect2"></div>
+                <div class="rect rect3"></div>
+                <div class="rect rect4"></div>
+                <div class="rect rect5"></div>
+              </div>
+            </div>
+          </div>
           <div>
             <h2 class="box-content-heading text-center">
               Upload a video that has people walking.
@@ -187,29 +201,45 @@
             <i class="fa-solid fa-circle-plus"></i>
           </div>
           <div class="images pb-3">
-            <div class="image cursor-pointer">
-              <img src="assets/images/widget-footer-images.png" alt="">
+            <div class="image" data-imageurl="assets/images/segmentation-of-people-in-the-photo/img__1.png">
+              <img src="assets/images/segmentation-of-people-in-the-photo/img.png" alt="Segmentation of people in the photo">
+              <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image cursor-pointer">
-              <img src="assets/images/widget-footer-images.png" alt="">
+            <div class="image" data-imageurl="assets/images/segmentation-of-people-in-the-photo/img_1_1.png">
+              <img src="assets/images/segmentation-of-people-in-the-photo/img_1.png" alt="Segmentation of people in the photo">
+              <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image cursor-pointer">
-              <img src="assets/images/widget-footer-images.png" alt="">
+            <div class="image"  data-imageurl="assets/images/segmentation-of-people-in-the-photo/img_2_2.png">
+              <img src="assets/images/segmentation-of-people-in-the-photo/img_2.png" alt="Segmentation of people in the photo">
+              <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image cursor-pointer">
-              <img src="assets/images/widget-footer-images.png" alt="">
+            <div class="image"  data-imageurl="assets/images/segmentation-of-people-in-the-photo/img_3_3.png">
+              <img src="assets/images/segmentation-of-people-in-the-photo/img_3.png" alt="Segmentation of people in the photo">
+              <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image cursor-pointer">
-              <img src="assets/images/widget-footer-images.png" alt="">
+            <div class="image"  data-imageurl="assets/images/segmentation-of-people-in-the-photo/img_4_4.png">
+              <img src="assets/images/segmentation-of-people-in-the-photo/img_4.png" alt="Segmentation of people in the photo">
+              <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image cursor-pointer">
-              <img src="assets/images/widget-footer-images.png" alt="">
+            <div class="image"  data-imageurl="assets/images/segmentation-of-people-in-the-photo/img_5_5.png">
+              <img src="assets/images/segmentation-of-people-in-the-photo/img_5.png" alt="Segmentation of people in the photo">
+              <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image cursor-pointer">
-              <img src="assets/images/widget-footer-images.png" alt="">
+            <div class="image"  data-imageurl="assets/images/segmentation-of-people-in-the-photo/img_6_6.png">
+              <img src="assets/images/segmentation-of-people-in-the-photo/img_6.png" alt="Segmentation of people in the photo">
+              <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image cursor-pointer">
-              <img src="assets/images/widget-footer-images.png" alt="">
+            <div class="image"  data-imageurl="assets/images/segmentation-of-people-in-the-photo/img_7_7.png">
+              <img src="assets/images/segmentation-of-people-in-the-photo/img_7.png" alt="Segmentation of people in the photo">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="image"  data-imageurl="assets/images/segmentation-of-people-in-the-photo/img_8_8.png">
+              <img src="assets/images/segmentation-of-people-in-the-photo/img_8.png" alt="Segmentation of people in the photo">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="image"  data-imageurl="assets/images/segmentation-of-people-in-the-photo/img_9_9.png">
+              <img src="assets/images/segmentation-of-people-in-the-photo/img_9.png" alt="Segmentation of people in the photo">
+              <i class="fa-solid fa-check"></i>
             </div>
           </div>
         </div>
@@ -230,5 +260,81 @@
 
 <script src="js/fastfront.js"></script>
 <script src="js/script.js"></script>
+
+<script>
+
+    function encodeImageFileAsURL(element, callback) {
+        const file = element.files[0];
+        const reader = new FileReader();
+        reader.onloadend = function() {
+            callback(reader.result)
+        }
+        reader.readAsDataURL(file);
+    }
+
+    let successClick = true;
+
+    const presets = $('.box-col2 .box-content-footer .images .image');
+
+
+    presets.on('click', function (){
+        if(successClick){
+          presets.removeClass(active);
+          $(this).addClass(active);
+
+          const imageUrl = $(this).children('img').attr('src');
+
+          $('.def-btn.pink').removeClass(disabled).removeAttr('disabled').attr('data-loadingimage', $(this).data('imageurl'));
+          $('.close-video').removeClass('active');
+          $('.box-col2 .box-content').css('background-image', `url(${imageUrl})`);
+          $('#upload-block').removeClass(none);
+          $('#video').addClass(none);
+          $('.box-content-heading').text('')
+          BoxContentAddActive(true)
+        }
+    })
+
+    $('.def-btn.pink').on('click', function (){
+        successClick = false;
+        openCloseLoading(true)
+        const imageUrl = $(this).attr('data-loadingimage');
+        setTimeout(() => {
+            openCloseLoading(false);
+            $('.box-col2 .box-content').css('background-image', `url(${imageUrl})`);
+            successClick = true;
+        }, 3000);
+    })
+
+    $('.box-content-close').on('click', function (){
+        $('.box-col2 .box-content').css('background-image', 'none');
+        $('.box-content-heading').text('Upload a video that has people walking. Format: jpg, jpeg, png')
+    })
+
+    $('#upload-file').on('change', function (e){
+        encodeImageFileAsURL(e.target, (res) => {
+            $('.box-col2 .box-content').css('background-image', `url(${res})`);
+            $('.box-content-heading').text('')
+        })
+        BoxContentAddActive(true)
+    })
+
+    function BoxContentAddActive(status){
+        if(status){
+            $('.box-content').addClass(active)
+        } else {
+            $('.box-content').removeClass(active)
+        }
+    }
+
+    function openCloseLoading(status){
+        if(status){
+            $('.box-content-loading').removeClass(none)
+        } else {
+            $('.box-content-loading').addClass(none)
+        }
+    }
+
+</script>
+
 </body>
 </html>
