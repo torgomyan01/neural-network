@@ -25,7 +25,7 @@
   <script src="js/aos.js"></script>
 
 
-  <title>Fixing the movement of people</title>
+  <title>Segmentation of people in the photo</title>
 
 </head>
 <body>
@@ -162,64 +162,54 @@
       </div>
     </div>
     <div class="col-12 col-lg-9 " data-aos="zoom" data-aos-duration="1000" data-aos-delay="300">
-      <div class="box-col2 ">
+      <div class="box-col2">
         <h2 class="widget-heading mb-32">Fixing the movement of people</h2>
         <div class="box-content">
-          <i  class="fa-sharp fa-solid fa-square-xmark close-video"></i>
-          <video id="video" class="d-none" style="width: 100%;height: 100%" autoplay loop muted="muted">
-            <source src="" type="video/webm">
-          </video>
-          <div id="upload-block">
+          <div>
             <h2 class="box-content-heading text-center">
               Upload a video that has people walking.
-              Format: mpg, mpeg, mp4
+              Format: jpg, jpeg, png
             </h2>
-            <div class="buttons">
-              <input type="file" class="d-none" id="upload-file">
-              <label for="upload-file">
-                <span class="def-btn mt-24 d-block d-flex justify-content-center align-items-center">Upload a video</span>
-              </label>
-              <button class="def-btn pink mt-24 start disabled" disabled>Start</button>
-            </div>
           </div>
         </div>
+       <div class="d-flex justify-content-center align-items-center">
+         <div class="buttons">
+           <input type="file" class="d-none" id="upload-file">
+           <label for="upload-file" class="me-20">
+             <span class="def-btn mt-24 d-block d-flex justify-content-center align-items-center">Upload a video</span>
+           </label>
+           <button class="def-btn pink mt-24 start disabled" disabled>Start</button>
+         </div>
+       </div>
         <div class="box-content-footer ">
           <div class="content-top">
             <h4>Presets</h4>
             <i class="fa-solid fa-circle-plus"></i>
           </div>
           <div class="images pb-3">
-            <div class="image" data-videourl="fixing-the-movement-of-people/1.mp4">
-              <img src="assets/images/widget-footer-images.png" alt="images">
-              <i class="fa-solid fa-check"></i>
+            <div class="image cursor-pointer">
+              <img src="assets/images/widget-footer-images.png" alt="">
             </div>
-            <div class="image" data-videourl="fixing-the-movement-of-people/2.mp4">
-              <img src="assets/images/fixing-the-movement-of-people/2.png" alt="images">
-              <i class="fa-solid fa-check"></i>
+            <div class="image cursor-pointer">
+              <img src="assets/images/widget-footer-images.png" alt="">
             </div>
-            <div class="image">
-              <img src="assets/images/widget-footer-images.png" alt="images">
-              <i class="fa-solid fa-check"></i>
+            <div class="image cursor-pointer">
+              <img src="assets/images/widget-footer-images.png" alt="">
             </div>
-            <div class="image">
-              <img src="assets/images/widget-footer-images.png" alt="images">
-              <i class="fa-solid fa-check"></i>
+            <div class="image cursor-pointer">
+              <img src="assets/images/widget-footer-images.png" alt="">
             </div>
-            <div class="image">
-              <img src="assets/images/widget-footer-images.png" alt="images">
-              <i class="fa-solid fa-check"></i>
+            <div class="image cursor-pointer">
+              <img src="assets/images/widget-footer-images.png" alt="">
             </div>
-            <div class="image">
-              <img src="assets/images/widget-footer-images.png" alt="images">
-              <i class="fa-solid fa-check"></i>
+            <div class="image cursor-pointer">
+              <img src="assets/images/widget-footer-images.png" alt="">
             </div>
-            <div class="image">
-              <img src="assets/images/widget-footer-images.png" alt="images">
-              <i class="fa-solid fa-check"></i>
+            <div class="image cursor-pointer">
+              <img src="assets/images/widget-footer-images.png" alt="">
             </div>
-            <div class="image">
-              <img src="assets/images/widget-footer-images.png" alt="images">
-              <i class="fa-solid fa-check"></i>
+            <div class="image cursor-pointer">
+              <img src="assets/images/widget-footer-images.png" alt="">
             </div>
           </div>
         </div>
@@ -240,37 +230,5 @@
 
 <script src="js/fastfront.js"></script>
 <script src="js/script.js"></script>
-
-<script>
-
-
-    const presets = $('.box-col2 .box-content-footer .images .image');
-
-
-    presets.on('click', function (){
-        presets.removeClass(active);
-        $(this).addClass(active);
-        $('.def-btn.pink').removeClass(disabled).removeAttr('disabled');
-        $('.close-video').removeClass('active');
-        $('.box-col2 .box-content').css('padding', '0 5rem');
-        $('#upload-block').removeClass(none);
-        $('#video').addClass(none);
-        $('#video source').attr('src', `assets/videos/${this.dataset.videourl}`);
-        $('.box-content-heading').text('File Uploaded')
-
-    })
-
-    $('.def-btn.pink').on('click', function (){
-        $('.box-col2 .box-content').css('padding', '0');
-        $('#upload-block').addClass(none);
-        $('.close-video').addClass('active');
-        $('#video').removeClass(none);
-        document.getElementById('video').load();
-        document.getElementById('video').play();
-        $('#video source').attr('src', this.dataset.videourl);
-        $('.box-content-heading').text('Upload a video that has people walking. Format: mpg, mpeg, mp4')
-    })
-</script>
-
 </body>
 </html>
