@@ -769,6 +769,8 @@ footer {
 
 
 .box-col {
+  height: 1660px;
+  overflow-x: auto;
   &::-webkit-scrollbar-track {
     background: transparent;
   }
@@ -777,6 +779,7 @@ footer {
     border-radius: 10px;
   }
   @media (max-width: 991px) {
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

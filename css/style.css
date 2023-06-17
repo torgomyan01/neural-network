@@ -712,6 +712,10 @@ footer .footer-content .footer-title {
   color: #FFFFFF;
 }
 
+.box-col {
+  height: 1660px;
+  overflow-x: auto;
+}
 .box-col::-webkit-scrollbar-track {
   background: transparent;
 }
@@ -721,6 +725,7 @@ footer .footer-content .footer-title {
 }
 @media (max-width: 991px) {
   .box-col {
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
