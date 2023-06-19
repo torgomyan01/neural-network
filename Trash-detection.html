@@ -318,33 +318,58 @@
 
 <script>
 
-
     const presets = $('.box-col2 .box-content-footer .images .image');
-
+    let successClick = true;
 
     presets.on('click', function (){
-        presets.removeClass(active);
-        $(this).addClass(active);
-        $('.def-btn.pink').removeClass(disabled).removeAttr('disabled');
-        $('.close-video').removeClass('active');
-        $('.box-col2 .box-content').css('padding', '0 5rem');
-        $('#upload-block').removeClass(none);
-        $('#video').addClass(none);
-        $('#video source').attr('src', `assets/videos/${this.dataset.videourl}`);
-        $('.box-content-heading').text('File Uploaded')
+        if(successClick){
+            presets.removeClass(active);
+            $(this).addClass(active);
+            $('.def-btn.pink').removeClass(disabled).removeAttr('disabled');
+            $('.close-video').removeClass('active');
+            $('.box-col2 .box-content').css('padding', '0 5rem');
+            $('#upload-block').removeClass(none);
+            $('#video').addClass(none);
+            $('#video source').attr('src', `assets/videos/${this.dataset.videourl}`);
+            $('.box-content-heading').text('File Uploaded')
+        }
 
     })
 
     $('.def-btn.pink').on('click', function (){
-        $('.box-col2 .box-content').css('padding', '0');
-        $('#upload-block').addClass(none);
-        $('.close-video').addClass('active');
-        $('#video').removeClass(none);
-        document.getElementById('video').load();
-        document.getElementById('video').play();
-        $('#video source').attr('src', this.dataset.videourl);
-        $('.box-content-heading').text('Upload a video that has people walking. Format: mpg, mpeg, mp4')
+        openCloseLoading(true)
+        successClick = false;
+        setTimeout(() => {
+            openCloseLoading(false)
+            $('.box-col2 .box-content').css('padding', '0').addClass(active);
+            $('#upload-block').addClass(none);
+            $('.close-video').addClass('active');
+            $('#video').removeClass(none);
+            document.getElementById('video').load();
+            document.getElementById('video').play();
+            $('#video source').attr('src', this.dataset.videourl);
+            $('.box-content-heading').text('Upload a video that has people walking. Format: mpg, mpeg, mp4')
+            successClick = true;
+        }, 3000)
     })
+
+
+
+    $('.box-content-close').on('click', function (){
+        $('#video').addClass(none);
+        $('.box-content-heading').text('Upload a video that has people walking. Format: mpg, mpeg, mp4');
+        $('.box-col2 .box-content').css('padding', '0 5rem');
+        $('#upload-block').removeClass(none)
+    })
+
+    function openCloseLoading(status){
+        if(status){
+            $('.box-content-loading').removeClass(none)
+        } else {
+            $('.box-content-loading').addClass(none)
+        }
+    }
+
 </script>
 
 </body>

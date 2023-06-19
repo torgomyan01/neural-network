@@ -51,7 +51,7 @@
       CONTACT
     </a>
   </div>
-  <div class="container d-flex justify-content-between align-items-center h-100">
+  <div class="container d-flex d-md-none justify-content-between align-items-center h-100">
     <a href="/index.html" class="d-block d-md-none">
       <img src="assets/images/logo-site.svg" alt="Logo site">
     </a>
@@ -240,6 +240,7 @@
             </h2>
           </div>
         </div>
+
         <div class="d-flex justify-content-center align-items-center">
           <div class="buttons">
             <input type="file" class="d-none" id="upload-file">
@@ -249,49 +250,82 @@
             <button class="def-btn pink mt-24 start disabled" disabled>Start</button>
           </div>
         </div>
+        <ul class="list-unstyled mt-4 d-none" id="list-res">
+          <li class="mb-3">
+            <div class="text-center py-2 bgc-white br-6"></div>
+          </li>
+        </ul>
         <div class="box-content-footer ">
           <div class="content-top">
             <h4>Presets</h4>
             <i class="fa-solid fa-circle-plus"></i>
           </div>
           <div class="images pb-3">
-            <div class="image" data-imageurl="assets/images/Classification-of-skin-diseases/1focus.jpg">
+            <div class="image"
+                 data-imageurl="assets/images/Classification-of-skin-diseases/1focus.jpg"
+                 data-list="AK: Актинический кератоз: 2%,BCC: Базально-клеточная карцинома: 10%,BKL: Доброкачественный кератоз (солнечное лентиго, себорейный кератоз, красный плоский кератоз): 24%,DF: Дерматофиброма: 6%,MEL: Меланома: 17%,NV: Меланоцитарный невус: 37%,VASC: Поражение сосудов: 4%">
               <img src="assets/images/Classification-of-skin-diseases/1.jpg" alt="Segmentation of people in the photo">
               <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image" data-imageurl="assets/images/Classification-of-skin-diseases/2focus.jpg">
+            <div class="image"
+                 data-imageurl="assets/images/Classification-of-skin-diseases/2focus.jpg"
+                 data-list="AK: Актинический кератоз: 0%,BCC: Базально-клеточная карцинома: 7%,BKL: Доброкачественный кератоз (солнечное лентиго, себорейный кератоз, красный плоский кератоз): 1%,DF: Дерматофиброма: 28%,MEL: Меланома: 15%,NV: Меланоцитарный невус: 48%,VASC: Поражение сосудов: 1%">
               <img src="assets/images/Classification-of-skin-diseases/2.jpg" alt="Segmentation of people in the photo">
               <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image"  data-imageurl="assets/images/Classification-of-skin-diseases/3focus.jpg">
+            <div class="image"
+                 data-imageurl="assets/images/Classification-of-skin-diseases/3focus.jpg"
+                 data-list="AK: Актинический кератоз: 95%,BCC: Баально-клеточная карцинома: 2%,BKL: Доброкачественный кератоз (солнечное лентиго, себорейный кератоз, красный плоский кератоз): 2%,DF: Дерматофиброма: 0%,MEL: Меланома: 1%,NV: Меланоцитарный невус: 0%,VASC: Поражение сосудов: 0%"
+            >
               <img src="assets/images/Classification-of-skin-diseases/3.jpg" alt="Segmentation of people in the photo">
               <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image"  data-imageurl="assets/images/Classification-of-skin-diseases/4focus.jpg">
+            <div class="image"
+                 data-imageurl="assets/images/Classification-of-skin-diseases/4focus.jpg"
+                 data-list="AK: Актинический кератоз: 0%,BCC: Базально-клеточная карцинома: 0%,BKL: Доброкачественный кератоз (солнечное лентиго, себорейный кератоз, красный плоский кератоз): 2%,DF: Дерматофиброма: 1%,MEL: Меланома: 1%,NV: Меланоцитарный невус: 95%,VASC: Поражение сосудов: 1%"
+            >
               <img src="assets/images/Classification-of-skin-diseases/4.jpg" alt="Segmentation of people in the photo">
               <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image"  data-imageurl="assets/images/Classification-of-skin-diseases/5focus.jpg">
+            <div class="image"
+                 data-imageurl="assets/images/Classification-of-skin-diseases/5focus.jpg"
+                 data-list="AK: Актинический кератоз: 0%,BCC: Базально-клеточная карцинома: 1%,BKL: Доброкачественный кератоз (солнечное лентиго, себорейный кератоз, красный плоский кератоз): 0%,DF: Дерматофиброма: 2%,MEL: Меланома: 0%,NV: Меланоцитарный невус: 97%,VASC: Поражение сосудов: 0%"
+            >
               <img src="assets/images/Classification-of-skin-diseases/5.jpg" alt="Segmentation of people in the photo">
               <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image"  data-imageurl="assets/images/Classification-of-skin-diseases/6focus.jpg">
+            <div class="image"
+                 data-imageurl="assets/images/Classification-of-skin-diseases/6focus.jpg"
+                 data-list="AK: Актинический кератоз: 3%,BCC: Базально-клеточная карцинома: 10%,BKL: Доброкачественный кератоз (солнечное лентиго, себорейный кератоз, красный плоский кератоз): 75%,DF: Дерматофиброма: 1%,MEL: Меланома: 1%,NV: Меланоцитарный невус: 10%,VASC: Поражение сосудов: 0%"
+            >
               <img src="assets/images/Classification-of-skin-diseases/6.jpg" alt="Segmentation of people in the photo">
               <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image"  data-imageurl="assets/images/Classification-of-skin-diseases/7focus.jpg">
+            <div class="image"
+                 data-imageurl="assets/images/Classification-of-skin-diseases/7focus.jpg"
+                 data-list="AK: Актинический кератоз: 1%,BCC: Базально-клеточная карцинома: 4%,BKL: Доброкачественный кератоз (солнечное лентиго, себорейный кератоз, красный плоский кератоз): 13%,DF: Дерматофиброма: 5%,MEL: Меланома: 28%,NV: Меланоцитарный невус: 48%,VASC: Поражение сосудов: 1%"
+            >
               <img src="assets/images/Classification-of-skin-diseases/7.jpg" alt="Segmentation of people in the photo">
               <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image"  data-imageurl="assets/images/Classification-of-skin-diseases/8focus.jpg">
+            <div class="image"
+                 data-imageurl="assets/images/Classification-of-skin-diseases/8focus.jpg"
+                 data-list="AK: Актинический кератоз: 2%,BCC: Базально-клеточная карцинома: 1%,BKL: Доброкачественный кератоз (солнечное лентиго, себорейный кератоз, красный плоский кератоз): 19%,DF: Дерматофиброма: 6%,MEL: Меланома: 11%,NV: Меланоцитарный невус: 56%,VASC: Поражение сосудов: 5%"
+            >
               <img src="assets/images/Classification-of-skin-diseases/8.jpg" alt="Segmentation of people in the photo">
               <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image"  data-imageurl="assets/images/Classification-of-skin-diseases/9focus.jpg">
+            <div class="image"
+                 data-imageurl="assets/images/Classification-of-skin-diseases/9focus.jpg"
+                 data-list="AK: Актинический кератоз: 1%,BCC: Базально-клеточная карцинома: 1%,BKL: Доброкачественный кератоз (солнечное лентиго, себорейный кератоз, красный плоский кератоз): 0%,DF: Дерматофиброма: 1%,MEL: Меланома: 3%,NV: Меланоцитарный невус: 91%,VASC: Поражение сосудов: 3%"
+            >
               <img src="assets/images/Classification-of-skin-diseases/9.jpg" alt="Segmentation of people in the photo">
               <i class="fa-solid fa-check"></i>
             </div>
-            <div class="image"  data-imageurl="assets/images/Classification-of-skin-diseases/10focus.jpg">
+            <div class="image"
+                 data-imageurl="assets/images/Classification-of-skin-diseases/10focus.jpg"
+                 data-list="AK: Актинический кератоз: 0%,BCC: Базально-клеточная карцинома: 41%,BKL: Доброкачественный кератоз (солнечное лентиго, себорейный кератоз, красный плоский кератоз): 1%,DF: Дерматофиброма: 8%,MEL: Меланома: 11%,NV: Меланоцитарный невус: 14%,VASC: Поражение сосудов: 25%"
+            >
               <img src="assets/images/Classification-of-skin-diseases/10.jpg" alt="Segmentation of people in the photo">
               <i class="fa-solid fa-check"></i>
             </div>
@@ -317,76 +351,91 @@
 
 <script>
 
-  function encodeImageFileAsURL(element, callback) {
-    const file = element.files[0];
-    const reader = new FileReader();
-    reader.onloadend = function() {
-      callback(reader.result)
+    function encodeImageFileAsURL(element, callback) {
+        const file = element.files[0];
+        const reader = new FileReader();
+        reader.onloadend = function () {
+            callback(reader.result)
+        }
+        reader.readAsDataURL(file);
     }
-    reader.readAsDataURL(file);
-  }
 
-  let successClick = true;
+    let successClick = true;
 
-  const presets = $('.box-col2 .box-content-footer .images .image');
+    const presets = $('.box-col2 .box-content-footer .images .image');
 
 
-  presets.on('click', function (){
-    if(successClick){
-      presets.removeClass(active);
-      $(this).addClass(active);
+    presets.on('click', function () {
+        if (successClick) {
+            presets.removeClass(active);
+            $(this).addClass(active);
 
-      const imageUrl = $(this).children('img').attr('src');
+            const imageUrl = $(this).children('img').attr('src');
 
-      $('.def-btn.pink').removeClass(disabled).removeAttr('disabled').attr('data-loadingimage', $(this).data('imageurl'));
-      $('.close-video').removeClass('active');
-      $('.box-col2 .box-content').css('background-image', `url(${imageUrl})`);
-      $('#upload-block').removeClass(none);
-      $('#video').addClass(none);
-      $('.box-content-heading').text('')
-      BoxContentAddActive(true)
-    }
-  })
-
-  $('.def-btn.pink').on('click', function (){
-    successClick = false;
-    openCloseLoading(true)
-    const imageUrl = $(this).attr('data-loadingimage');
-    setTimeout(() => {
-      openCloseLoading(false);
-      $('.box-col2 .box-content').css('background-image', `url(${imageUrl})`);
-      successClick = true;
-    }, 3000);
-  })
-
-  $('.box-content-close').on('click', function (){
-    $('.box-col2 .box-content').css('background-image', 'none');
-    $('.box-content-heading').text('Upload a video that has people walking. Format: jpg, jpeg, png')
-  })
-
-  $('#upload-file').on('change', function (e){
-    encodeImageFileAsURL(e.target, (res) => {
-      $('.box-col2 .box-content').css('background-image', `url(${res})`);
-      $('.box-content-heading').text('')
+            $('.def-btn.pink').removeClass(disabled)
+                .removeAttr('disabled')
+                .attr('data-loadingimage', $(this).data('imageurl'))
+                .attr('data-list', $(this).data('list'));
+            $('.close-video').removeClass('active');
+            $('.box-col2 .box-content').css('background-image', `url(${imageUrl})`);
+            $('#upload-block').removeClass(none);
+            $('#video').addClass(none);
+            $('.box-content-heading').text('')
+            BoxContentAddActive(true)
+            $('#list-res').addClass(none)
+        }
     })
-    BoxContentAddActive(true)
-  })
 
-  function BoxContentAddActive(status){
-    if(status){
-      $('.box-content').addClass(active)
-    } else {
-      $('.box-content').removeClass(active)
-    }
-  }
+    $('.def-btn.pink').on('click', function () {
+        successClick = false;
+        openCloseLoading(true)
+        const imageUrl = $(this).attr('data-loadingimage');
+        setTimeout(() => {
+            openCloseLoading(false);
+            $('.box-col2 .box-content').css('background-image', `url(${imageUrl})`);
 
-  function openCloseLoading(status){
-    if(status){
-      $('.box-content-loading').removeClass(none)
-    } else {
-      $('.box-content-loading').addClass(none)
+            const list = $(this).data('list').split(',').map((text) => {
+                return `
+                  <li class="mb-3">
+                    <div class="text-center py-2 bgc-white br-6">${text}</div>
+                  </li>
+                `
+            }).join('');
+            $('#list-res').removeClass(none).html(list)
+
+            successClick = true;
+        }, 3000);
+    })
+
+    $('.box-content-close').on('click', function () {
+        $('.box-col2 .box-content').css('background-image', 'none');
+        $('.box-content-heading').text('Upload a video that has people walking. Format: jpg, jpeg, png')
+    })
+
+    $('#upload-file').on('change', function (e) {
+        encodeImageFileAsURL(e.target, (res) => {
+            $('.box-col2 .box-content').css('background-image', `url(${res})`);
+            $('.box-content-heading').text('');
+            $('#list-res').removeClass(none)
+        })
+        BoxContentAddActive(true)
+    })
+
+    function BoxContentAddActive(status) {
+        if (status) {
+            $('.box-content').addClass(active)
+        } else {
+            $('.box-content').removeClass(active)
+        }
     }
-  }
+
+    function openCloseLoading(status) {
+        if (status) {
+            $('.box-content-loading').removeClass(none)
+        } else {
+            $('.box-content-loading').addClass(none)
+        }
+    }
 
 </script>
 
