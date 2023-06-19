@@ -721,8 +721,13 @@ footer .footer-content .footer-title {
   background: transparent;
 }
 .box-col::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
+}
+.box-col::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-radius: 5px;
 }
 @media (max-width: 991px) {
   .box-col {
@@ -733,6 +738,17 @@ footer .footer-content .footer-title {
     overflow-y: auto;
     gap: 1.5rem;
   }
+}
+
+.box-item {
+  opacity: 0.25;
+  transition: 0.3s;
+}
+.box-item:hover {
+  opacity: 1;
+}
+.box-item.active {
+  opacity: 1;
 }
 
 .box-col2 {
