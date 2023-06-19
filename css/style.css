@@ -715,6 +715,7 @@ footer .footer-content .footer-title {
 .box-col {
   height: 1660px;
   overflow-x: auto;
+  padding-right: 0.625rem;
 }
 .box-col::-webkit-scrollbar-track {
   background: transparent;
@@ -1037,6 +1038,12 @@ footer .footer-content .footer-title {
 
 .rect5 {
   animation-delay: -0.9s;
+}
+
+@media (min-width: 992px) {
+  .w-lg-100 {
+    width: 100% !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
